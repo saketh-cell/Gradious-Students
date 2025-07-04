@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import moment from "moment";
 
 // Helper function to generate status text
@@ -16,7 +16,9 @@ const getLastSeenMessage = (lastSeen) => {
 };
 
 // ProfileCard component
-const ProfileCard = ({ imageUrl, name, skills, lastSeen, github }) => {
+const ProfileCard = ({ imageUrl, name, skills, lastSeen, github, viewCv }) => {
+  const [cvHovered, setCvHovered] = useState(false); // track hover
+
   return (
     <div
       style={{
@@ -62,12 +64,10 @@ const ProfileCard = ({ imageUrl, name, skills, lastSeen, github }) => {
           {name}
         </h2>
 
-        {/* Skills Title */}
+        {/* Skills */}
         <h3 style={{ fontSize: "15px", marginBottom: "10px", color: "#333" }}>
           Skill Set
         </h3>
-
-        {/* Skill badges */}
         <div
           style={{
             display: "flex",
@@ -100,27 +100,50 @@ const ProfileCard = ({ imageUrl, name, skills, lastSeen, github }) => {
           <strong>Status:</strong> {getLastSeenMessage(lastSeen)}
         </p>
 
-        {/* GitHub Link (optional) */}
-        {github && (
-          <a
-            href={github}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              display: "inline-block",
-              marginTop: "8px",
-              textDecoration: "none",
-              color: "#fff",
-              backgroundColor: "#333",
-              padding: "6px 12px",
-              borderRadius: "20px",
-              fontSize: "12px",
-              fontWeight: "bold",
-            }}
-          >
-            🔗 GitHub
-          </a>
-        )}
+        {/* Buttons */}
+        <div style={{ display: "flex", justifyContent: "center", gap: "8px" }}>
+          {github && (
+            <a
+              href={github}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                textDecoration: "none",
+                color: "#fff",
+                backgroundColor: "#333",
+                padding: "6px 12px",
+                borderRadius: "20px",
+                fontSize: "12px",
+                fontWeight: "bold",
+              }}
+            >
+              🔗 GitHub
+            </a>
+          )}
+
+          {viewCv && (
+            <a
+              href={viewCv}
+              target="_blank"
+              rel="noopener noreferrer"
+              onMouseEnter={() => setCvHovered(true)}
+              onMouseLeave={() => setCvHovered(false)}
+              style={{
+                textDecoration: "none",
+                color: cvHovered ? "#fff" : "#333",
+                backgroundColor: cvHovered ? "#333" : "#fff",
+                padding: "6px 12px",
+                border: "1px solid #333",
+                borderRadius: "20px",
+                fontSize: "12px",
+                fontWeight: "bold",
+                transition: "all 0.3s ease",
+              }}
+            >
+              📄 View CV
+            </a>
+          )}
+        </div>
       </div>
     </div>
   );

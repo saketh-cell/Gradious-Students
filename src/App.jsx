@@ -25,10 +25,11 @@ function App() {
       >
         <ProfileCard
           name="Saketh Ram"
-          imageUrl="/saketh2pic.png.jpg"
-          skills={["React", "Node.js", "MongoDB"]}
+          imageUrl="/sakethcard.jpg"
+          skills={["React", "Node.js", "MongoDB","Express","MERN"]}
           lastSeen={null}
           github="https://github.com/saketh-cell"
+          viewCv="https://drive.google.com/file/d/1juKDAZBLxqmmF5QnArUfudW6chFj4yT0/view?usp=drive_link"
         />
 
         <ProfileCard
@@ -37,6 +38,7 @@ function App() {
           skills={["HTML", "CSS", "UI/UX", "Javascript", "MERN"]}
           lastSeen={new Date(Date.now() - 1000 * 60 * 60 * 48).toISOString()}
           github="https://github.com/EnagantiRohith"
+          viewCv="https://drive.google.com/file/d/1juKDAZBLxqmmF5QnArUfudW6chFj4yT0/view?usp=drive_link"
         />
         <ProfileCard
           name="Nikshith"
@@ -44,6 +46,7 @@ function App() {
           skills={["HTML", "CSS", "Javascript", "Java", "MERN"]}
           lastSeen={null} 
           github="https://github.com/DNikshith"
+          viewCv="https://drive.google.com/file/d/1juKDAZBLxqmmF5QnArUfudW6chFj4yT0/view?usp=drive_link"
         />
         <ProfileCard
           name="Dileep Kumar"
@@ -51,6 +54,7 @@ function App() {
           skills={["Java", "React", "Node", "MERN"]}
           lastSeen={new Date(Date.now() - 1000 * 60 * 60 * 30).toISOString()}
           github="https://github.com/dhileepkumar-56"
+          viewCv="https://drive.google.com/file/d/1juKDAZBLxqmmF5QnArUfudW6chFj4yT0/view?usp=drive_link"
         />
         <ProfileCard
           name="Hemanth"
@@ -58,6 +62,7 @@ function App() {
           skills={["MongoDB", "MySQL", "NoSQL", "MERN"]}
           lastSeen={null} // Online
           github="https://github.com/Atlahemanthkumarreddy"
+          viewCv="https://drive.google.com/file/d/1juKDAZBLxqmmF5QnArUfudW6chFj4yT0/view?usp=drive_link"
         />
         <ProfileCard
           name="Jaswanth"
@@ -67,6 +72,7 @@ function App() {
             Date.now() - 1000 * 60 * 60 * 24 * 10
           ).toISOString()}
           github="https://github.com/EnagantiRohith"
+          viewCv="https://drive.google.com/file/d/1juKDAZBLxqmmF5QnArUfudW6chFj4yT0/view?usp=drive_link"
         />
         <ProfileCard
           name="Chari"
@@ -74,6 +80,7 @@ function App() {
           skills={["Python", "Java", "MERN", "JavaScript","Flask"]}
           lastSeen={null} // Online
           github="https://github.com/Venkateshchary07"
+          viewCv="https://drive.google.com/file/d/1juKDAZBLxqmmF5QnArUfudW6chFj4yT0/view?usp=drive_link"
         />
         <ProfileCard
           name="Nikhil"
@@ -81,6 +88,7 @@ function App() {
           skills={["React", "Node", "MongoDB", "MERN"]}
           lastSeen={new Date(Date.now() - 1000 * 60 * 60 * 45).toISOString()}
           github="https://github.com/EnagantiRohith"
+          viewCv="https://drive.google.com/file/d/1juKDAZBLxqmmF5QnArUfudW6chFj4yT0/view?usp=drive_link"
         />
         <ProfileCard
           name="Aravind"
@@ -88,6 +96,7 @@ function App() {
           skills={["Javascript", "Java", "React", "MERN"]}
           lastSeen={null} // Online
           github="https://github.com/EnagantiRohith"
+          viewCv="https://drive.google.com/file/d/1juKDAZBLxqmmF5QnArUfudW6chFj4yT0/view?usp=drive_link"
         />
       </div>
     </>
