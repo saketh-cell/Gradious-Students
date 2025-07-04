@@ -57,7 +57,7 @@ const ProfileCard = ({ imageUrl, name, skills, lastSeen }) => {
         </h2>
 
         <h3 style={{ fontSize: "15px", marginBottom: "10px", color: "#333" }}>
-          Skills
+          Skill Set
         </h3>
 
         {/* ✅ Modern badge-style skills */}
