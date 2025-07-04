@@ -48,7 +48,7 @@ function App() {
       >
         <ProfileCard
           name="Saketh Ram"
-          imageUrl="/sakethcard.jpg"
+          imageUrl="/SakethFun.jpg"
           skills={["React", "Node.js", "MongoDB", "Express", "MERN"]}
           lastSeen={null}
           github="https://github.com/saketh-cell"
