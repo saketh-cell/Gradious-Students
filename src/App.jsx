@@ -92,7 +92,7 @@ function App() {
           skills={["BPO", "HR", "Product Management", "Javascript"]}
           lastSeen={new Date(Date.now() - 1000 * 60 * 60 * 24 * 10).toISOString()}
           github="https://github.com/EnagantiRohith"
-          viewCv="https://drive.google.com/file/d/1juKDAZBLxqmmF5QnArUfudW6chFj4yT0/view?usp=drive_link"
+          viewCv="https://drive.google.com/file/d/1NSluZewmv3YLhxsCs8cqKne1M3JAJIeW/view?usp=sharing"
         />
         <ProfileCard
           name="Chari"
