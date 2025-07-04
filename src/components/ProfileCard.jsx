@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment";
 
+// Helper function to generate status text
 const getLastSeenMessage = (lastSeen) => {
   if (!lastSeen) return "✅ Online";
 
@@ -14,7 +15,8 @@ const getLastSeenMessage = (lastSeen) => {
   return "Last seen several days ago";
 };
 
-const ProfileCard = ({ imageUrl, name, skills, lastSeen }) => {
+// ProfileCard component
+const ProfileCard = ({ imageUrl, name, skills, lastSeen, github }) => {
   return (
     <div
       style={{
@@ -36,6 +38,7 @@ const ProfileCard = ({ imageUrl, name, skills, lastSeen }) => {
         e.currentTarget.style.boxShadow = "0 4px 8px rgba(0,0,0,0.08)";
       }}
     >
+      {/* Profile Image */}
       <img
         src={imageUrl}
         alt="Profile"
@@ -45,7 +48,10 @@ const ProfileCard = ({ imageUrl, name, skills, lastSeen }) => {
           objectFit: "cover",
         }}
       />
+
+      {/* Content */}
       <div style={{ padding: "12px" }}>
+        {/* Name */}
         <h2
           style={{
             margin: "10px 0 8px",
@@ -56,11 +62,12 @@ const ProfileCard = ({ imageUrl, name, skills, lastSeen }) => {
           {name}
         </h2>
 
+        {/* Skills Title */}
         <h3 style={{ fontSize: "15px", marginBottom: "10px", color: "#333" }}>
           Skill Set
         </h3>
 
-        {/* ✅ Modern badge-style skills */}
+        {/* Skill badges */}
         <div
           style={{
             display: "flex",
@@ -88,9 +95,32 @@ const ProfileCard = ({ imageUrl, name, skills, lastSeen }) => {
           ))}
         </div>
 
-        <p style={{ color: "#888", fontSize: "12px" }}>
+        {/* Status */}
+        <p style={{ color: "#888", fontSize: "12px", marginBottom: "8px" }}>
           <strong>Status:</strong> {getLastSeenMessage(lastSeen)}
         </p>
+
+        {/* GitHub Link (optional) */}
+        {github && (
+          <a
+            href={github}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-block",
+              marginTop: "8px",
+              textDecoration: "none",
+              color: "#fff",
+              backgroundColor: "#333",
+              padding: "6px 12px",
+              borderRadius: "20px",
+              fontSize: "12px",
+              fontWeight: "bold",
+            }}
+          >
+            🔗 GitHub
+          </a>
+        )}
       </div>
     </div>
   );
